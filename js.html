@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Weight</title>
+    <style>
+        label{
+            width: 100px;
+            display: inline-block;
+            padding: 10px;
+            text-align: center;
+        }
+        #container{
+            width: 100px;
+            height: 50px;
+            margin: 80px;
+            
+        }
+        input{
+            text-align: center;
+            background-color: aqua;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>
+    <!-- <form> -->
+        <label for="age"> Age: </label>
+        <input type="text" id="age" name="Age"><br><br>
+        <label for="weight"> Weight: </label>
+        <input type="text" id="weight" name="Weight"><br><br>
+        <button onclick="calculateWeight()">Submit</button>
+        <p id="class"></p>
+      <!-- </form> -->
+        </div>
+        </div>
+        <script src="calculate.js"></script>
+      
+</body>
+</html>
