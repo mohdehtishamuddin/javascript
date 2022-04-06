@@ -43,11 +43,15 @@
             document.getElementById("class").innerHTML="Fit";
           }
           else if(jweight<31){
+          
             document.getElementById("class").innerHTML="underweight";
           }
           else{
             document.getElementById('class').innerHTML="overweight";
-            console.log('Hello World');
+      
           }
+
+      } else{
+        document.getElementById('class').innerHTML="Input valid ";
       }
     }
