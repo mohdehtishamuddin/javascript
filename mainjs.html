@@ -6,64 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Counter</title>
     <style>
-        * {
-           position: relative;
-           margin: 0;
-           padding: 0;
-           box-sizing: border-box;  
-          
+        body {
+            
+            position: absolute;
+            text-align: center;
         }
-        body{
-            display: flex;
-            align-items: center;
+        .container {
             justify-content: center;
-            width: 100%;
-            height: 50%;
-            margin: 50px;
-            padding: 40px;
+            align-items: center;
+            display: flex;
+            border: 2px solid lightsteelblue;
+            border-radius: 20%;
+            
         }
+          button {
+            width: 90px;
+            height: 80px;
+            font-size: 30px;
+            background-color: #eeeeee;
+            color: black;
+        } 
+       
+          h2{ 
+            color: black;
+            margin: 0 50px;
+            font-size: 30px; 
+
+         } 
+         .inc{
+             
+ border-bottom-right-radius: 20%;
+ border-top-right-radius: 20%;             
+
            
+            
+        } 
         
-        #decrement{
-            border-radius: 10px;
-            height: 20px;
-            width: 110px;
-            margin-top: 0px;
-            margin-left: 95px;
-            padding: 28px;
-            text-align: center;
-            font-size: 1.5em;
-           background-color: #e8edee;
-        }
-        #increment{
-            border-radius: 10px;
-            height: 20px;
-            width: 110px;
-            margin-top: 0px;
-            margin-right: 50px;
-            padding: 28px;
-            font-size: 1.5em;
-          background-color: #e8edee ;
-        }
-        input{
-            border-radius: 10px;
-            outline: none;
-            border: 1px solid;
-            padding: 15px 0;
-            width: 100px;
-            text-align: center;
-            font-size: 1.5em;
-            margin: 10px 0;
-          
-        }
+         #dec {
+            border-bottom-left-radius: 20%;
+            border-top-left-radius: 20%;   
+        } 
+             
+         
     </style>
 </head>
 <body>
-   
-             <button id="decrement">-</button>
-             <input type="text" id="field" value="0">
-             <button id="increment">+</button>        
-     </div>
-    <script src="main.js"></script>
+        <div class="container">
+         <button onclick="decrement()" id="dec">-</button>
+        <h2 id="root"></h2>
+         <button onclick="increment()" id="inc">+</button>
+         </div>
+         <script>
+             var data = 0;
+             document.getElementById("root").innerText=data;
+             function decrement(){
+                 data=data-1;
+                 document.getElementById("root").innerText=data;
+             }
+             function increment(){
+                 data=data+1;
+                 document.getElementById("root").innerText=data;
+             }
+         </script>
 </body>
 </html>
